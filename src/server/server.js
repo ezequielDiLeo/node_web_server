@@ -1,8 +1,7 @@
-const express = require('express')
-const path = require('path') //propio de Node para leer las capetas del explorer
-const { start } = require('repl')
+import express from 'express'
+import path from 'path' //propio de Node para leer las capetas del explorer
 
-const startServer = (options) => {
+export const startServer = (options) => {
     const { port, public_path = 'public' } = options//desestructuramos el puerto y la carpeta public
 
     const app = express()
@@ -22,6 +21,3 @@ const startServer = (options) => {
 
 } //funcion 
 
-module.exports = {
-    startServer
-}
